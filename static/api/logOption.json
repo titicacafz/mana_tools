@@ -1,0 +1,13 @@
+{
+  "code": 0,
+  "data": [
+    {
+        "service": "门诊收费",
+        "log_file": "E:/Work/rust/log_tool/access.log"
+    },
+    {
+      "service": "住院收费",
+        "log_file": "E:/Work/rust/log_tool/access_zy.log"
+    }
+  ]
+}

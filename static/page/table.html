@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.timepicker.min.css" />
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <div id="searchBox">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">操作人</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="name" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <!-- <div class="layui-inline">
+                        <label class="layui-form-label">时间</label>
+                        <div class="layui-input-inline"  style="width:150px;">
+                            <input type="text" class="layui-input" id="time">
+                        </div>
+                    </div> -->
+                    <div class="layui-inline">
+                        <label class="layui-form-label">起始时间</label>
+                        <div class="layui-input-inline">
+                            <input id="timeformatExample1" class="layui-input" type="text" class="time" />
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">终止时间</label>
+                        <div class="layui-input-inline">
+                            <input id="timeformatExample2" class="layui-input" type="text" class="time" />
+                        </div>
+                    </div>
+					<div class="layui-inline">
+                        <label class="layui-form-label">接口</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="uri" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">关键字</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="detail" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+					<div class="layui-inline">
+                        <div class="layui-input-inline">
+                           <input type="checkbox" name="is_failed" title="错误"> 
+                        </div>
+                    </div>
+					<div class="layui-inline">
+                        <div class="layui-input-inline">
+                           <input type="checkbox" name="is_slow" title="慢查询"> 
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="submit" class="layui-btn layui-btn-primary" lay-submit  lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>
+                        <button type="reset" class="layui-btn layui-btn-primary" lay-submit  lay-filter="data-reset-btn">重置</button>
+                        <button type="reset" class="layui-btn layui-btn-primary" lay-submit  lay-filter="data-export-btn">导出</button>
+                    </div>
+                </div>
+               
+            </form>
+        </div>
+        <table class="layui-hide" id="currentTableId" lay-size="sm" lay-filter="currentTableFilter"></table>
+        <script type="text/html" id="currentTableBar">
+            <a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="detail">详情</a>
+        </script>
+
+    </div>
+</div>
+<style>
+    #searchBox .layui-inline{margin:0 0px 10px 0}
+    .layui-form-item{margin:0 !important}
+    #colorExam{
+        padding:0 10px 0
+    }
+    .spanItem{
+        line-height: 20px;
+        margin-right:20px;
+        display: inline-block;
+    }
+    .spanItem span{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top:2px;
+    }
+    .spanItem .redItem{     
+        background:#4f7ecb
+    }
+    .spanItem .blueItem{     
+        background:#e34d4d
+    }
+    .layui-form-pane .layui-input-inline{width:120px;}
+</style>
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script src="../js/common.js" charset="utf-8"></script>
+<script src="../js/base.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/jquery.timepicker.min.js"></script>
+<script>
+    //curData存储当前操作行的数据 用于给iframe弹窗传值
+    let curData = {};
+    layui.use(['form', 'table','laydate','myModule'], function () {
+        //初始化开始
+        var $ = layui.jquery,
+            form = layui.form,
+            table = layui.table,
+            layuimini = layui.layuimini,
+            myModule = layui.myModule,
+            laydate = layui.laydate;
+        
+        let tableBlue="#4f7ecb" //表格蓝色
+        let tableRed="#e34d4d" //表格红色
+        //设置表格高度
+        let tableHeight = getBaseHeight()-$("#searchBox").outerHeight()-20
+        //时间选择器
+        $('#timeformatExample1').timepicker({ 'timeFormat': 'H:i:s' });
+        $('#timeformatExample2').timepicker({ 'timeFormat': 'H:i:s' });
+        /***********************************表格渲染及表格操作按钮监听********************************************/
+        //构建表格
+        table.render({
+            elem: '#currentTableId',
+            //url: '../api/table.json',
+            height: tableHeight, //设置表格高度
+            // url: `${ajaxUrlSet}/logquery`,
+			contentType: 'application/json',
+			where: {
+                name: '',
+                detail: '', //详情
+                start_time: '',
+                end_time: '',
+				is_slow: 0,
+				uri: '',
+				is_failed: 0,
+            }, //如果无需传递额外参数，可不加该参数
+            // method: 'post', //如果无需自定义HTTP类型，可不加该参数
+            toolbar: '#toolbarDemo',
+            defaultToolbar: ['filter', 'exports', 'print', {
+                title: '提示',
+                layEvent: 'LAYTABLE_TIPS',
+                icon: 'layui-icon-tips'
+            }],
+            //limit:Number.MAX_VALUE, // 数据表格默认全部显示
+            cols: [[
+                {type: "checkbox",width: 80,title: '序号'},
+			    {type: "numbers",width: 80,title: '序号'},
+                {field: 'date', width: 130, title: '日期'},
+                {field: 'time', width: 130, title: '时间'},
+                {field: 'ip', width: 130, title: 'ip'},
+                {field: 'user_name', width: 100, title: '操作人'},
+				{field: 'api_name', width: 200, title: '接口名称'},
+				{field: 'uri', width: 320, title: '接口地址'},
+				{field: 'status', width: 60, title: '结果'},
+				{field: 'time_span', width: 70, title: '耗时'}, 
+                {title: '操作',width: 150,templet: '#currentTableBar',fixed: "right",align: "center"}
+            ]],
+            page: false,
+            done: function(res, curr, count) {
+                //关闭遮罩层
+                layer.closeAll('loading')
+                var len = res.data.length - 1;
+                for (var i in res.data) {        //遍历整个表格数据
+                    var item = res.data[i];		//获取当前行数据
+                    switch(item.status){
+                        case "200":
+                        break;
+                        case "100":
+                        $('tr[data-index=' + i + ']').css({"color":tableBlue,});
+                        break;
+                        default:
+                        $('tr[data-index=' + i + ']').css({"color":tableRed,});
+                        break;
+                    }
+                }
+
+            },
+            error:function(res) {
+                //关闭遮罩层
+                layer.closeAll('loading')
+                layer.msg('请求失败', {icon: 2,time: 1100});
+            }
+        });
+        //监听表格复选框选择
+        table.on('checkbox', function(obj){
+           // console.log(table.checkStatus('currentTableId').data)
+
+        });
+        //监听表格操作按钮
+        table.on('tool(currentTableFilter)', function (obj) {
+            //存储当前操作航数据
+            curData = obj.data
+            let data = obj.data;
+            //点击详情按钮
+            if (obj.event === 'detail') {
+
+                var index = layer.open({
+                    title: '详情',
+                    type: 2,
+                    shade: 0.2,
+                    maxmin:true,
+                    shadeClose: true,
+                    area: ['100%', '100%'],
+                    content: '/page/table/log-detail.html',
+                });
+                $(window).on("resize", function () {
+                    layer.full(index);
+                });
+                return false;
+            } 
+        });
+        /*****************************************搜索栏接听*******************************************/
+        // 监听搜索操作
+        form.on('submit(data-search-btn)', function (data) {
+            var result = data.field;
+			console.log("re",result)
+            layer.load(0, {
+                shade: [0.1, '#000']
+            });
+            //执行搜索重载
+            table.reload('currentTableId', {
+                url: `${ajaxUrlSet}/logquery`,
+                method: 'post', //如果无需自定义HTTP类型，可不加该参数
+                where: {
+                    name:result.name, //操作人
+                    detail:result.detail, //详情
+                    start_time:$('#timeformatExample1').val()?$('#timeformatExample1').val()+".000":"",
+                    end_time:$('#timeformatExample2').val()?$('#timeformatExample2').val()+".999":"",
+					is_slow:result.is_slow=="on"?1:0,
+					uri:result.uri,
+					is_failed:result.is_failed=="on"?1:0,
+                }
+            });
+
+            return false;
+        });
+        // 监听重置操作
+        form.on('submit(data-reset-btn)', function (data) {
+            console.log("reset")
+            startTime=""
+            endTime=""
+        });
+        // 监听导出操作
+        form.on('submit(data-export-btn)', function (data) {
+            console.log("export")
+            let array = table.checkStatus('currentTableId').data
+            if(array&&array.length>0){
+                console.log(array)
+                //layer.load(0, {shade: [0.1, '#000']});
+                //构造导出请求入参
+                let params = [];
+                array.map(item=>{
+                    params.push(item.request_id)
+                })
+				let req_ids = params.join(",");
+                downLoadFile(`${ajaxUrlSet}/logexport`, {select_array:req_ids}, "post",false) 
+                //ajax请求
+                // myModule.ajax({
+                //     url: `${ajaxUrlSet}/logdown`,
+                //     type: "post",
+                //     dataType: "json",
+                //     data: JSON.stringify(params),
+                //     success: function(res) {
+                //         layer.msg('请求成功', {icon: 1,time: 1100});
+                //         //关闭遮罩层
+                //         layer.closeAll('loading')
+                //     },
+                //     error:function(r){
+                //         layer.msg('请求失败', {icon: 2,time: 1100});
+                //         //关闭遮罩层
+                //         layer.closeAll('loading')
+                //     }
+                
+                // })
+            }
+            else{
+                layer.open({title:"提示",content: '请勾选需要导出的数据记录',});  
+            }
+        });
+        
+        
+
+    });
+    //iframe弹窗获取当前操作行数据的方法
+    function getCurData() {
+        return curData;
+    }
+</script>
+
+</body>
+</html>

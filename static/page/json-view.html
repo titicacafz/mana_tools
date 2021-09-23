@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <link rel="stylesheet" href="../css/jquery.json-viewer.css" media="all">
+</head>
+<body>
+<div class="layuimini-container">  
+  <!--------------------------------------------操作栏 --------------------------------->
+  <div class="ctrl-box">
+    <button type="button" class="layui-btn" id="btn-json-viewer">转换Json数据</button>
+    <label class="checkbox-inline">
+      <input type="checkbox" id="collapsed">
+      收缩所有的节点 </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" id="with-quotes">
+      为Key添加双引号 </label>
+      <button type="button" class="layui-btn" id="copy-btn">复制</button>
+  </div>
+   <!--------------------------------------------数据栏 --------------------------------->
+  <div class="layui-row">
+    <div class="layui-col-md6" style="overflow-y:auto;">
+      <textarea class="layui-textarea" id="json-input" rows="15" ></textarea>
+        <textarea id="copy-dom"></textarea>
+    </div>
+    <div class="layui-col-md6" style="padding-left:20px;">
+      <div id="json-renderer"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .log_box{margin:20px 0;}
+  .ctrl-box{height:40px;padding:10px}
+  #json-input{width:100%;}
+  #json-renderer{padding:25px;border:1px solid #ddd;overflow-y:auto}
+  #copy-dom {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+  #copy-btn{float: right;}
+  .checkbox-inline{margin:0 5px;}
+</style>
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script src="../js/base.js" charset="utf-8"></script>
+<script src="../js/jquery.json-viewer.js" charset="utf-8"></script>
+<script>
+
+  
+ layui.config({
+        base: '../js/lay-module/' 
+    }).extend({
+        myModule:'moduleMy/myModule', //ajax拦截器
+    }).use(['myModule','layer'], function(){
+          var $ = layui.jquery,
+          layer = layui.layer,
+          myModule = layui.myModule;
+          console.log("getBaseHeight()",getBaseHeight())
+          let domHeight = getBaseHeight()-$(".ctrl-box").outerHeight();
+          //初始化页面模块高度
+          $(".layuimini-container").css({height:`${getBaseHeight()}px`})
+          $("#json-input").css({height:`${domHeight}px`})
+          $("#json-renderer").css({height:`${domHeight-50}px`})
+          //点击json转换按钮方法
+          $('#btn-json-viewer').click(function() {
+            try {
+              var input = eval('(' + $('#json-input').val() + ')');
+            }
+            catch (error) {
+              console.log("error",error)
+             return layer.open({
+                        title:"json转换错误",
+                        content: `${error}`,
+                      });   
+            }
+            var options = {
+              collapsed: $('#collapsed').is(':checked'),
+              withQuotes: $('#with-quotes').is(':checked')
+            };
+            console.log("input",input)
+            $('#json-renderer').jsonViewer(input, options);
+          });
+          //点击复制按钮方法
+          $("#copy-btn").on("click",function(){
+            copyText();
+          })
+          //复制文本方法
+          function copyText() {
+            var text = document.getElementById("json-renderer").innerText;
+            var input = document.getElementById("copy-dom");
+            input.value = text; // 修改文本框的内容
+            input.select(); // 选中文本
+            document.execCommand("copy"); // 执行浏览器复制命令
+            layer.open({content: '复制成功',});  
+          }
+      })
+
+</script>
+
+</body>
+</html>

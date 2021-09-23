@@ -1,0 +1,468 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "_id": {
+          "$oid": "605d3b90006b854f004420d9"
+      },
+      "date": "2021-03-24",
+      "time": "08:05:30,241",
+      "ip": "[129.1.74.30]",
+      "user_name": "刘玉清",
+      "user_id": "4203",
+      "request_id": "[22679b92c9124411889f54bf4787770c]",
+      "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+      "status": "400",
+      "time_span": "0",
+      "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+  },{
+    "_id": {
+        "$oid": "605d3b90006b854f004420d9"
+    },
+    "date": "2021-03-24",
+    "time": "08:05:30,241",
+    "ip": "[129.1.74.30]",
+    "user_name": "刘玉清",
+    "user_id": "4203",
+    "request_id": "[22679b92c9124411889f54bf4787770c]",
+    "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+    "status": "100",
+    "time_span": "0",
+    "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+      "_id": {
+          "$oid": "605d3b90006b854f004420d9"
+      },
+      "date": "2021-03-24",
+      "time": "08:05:30,241",
+      "ip": "[129.1.74.30]",
+      "user_name": "刘玉清",
+      "user_id": "4203",
+      "request_id": "[22679b92c9124411889f54bf4787770c]",
+      "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+      "status": "200",
+      "time_span": "0",
+      "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+  },{
+    "_id": {
+        "$oid": "605d3b90006b854f004420d9"
+    },
+    "date": "2021-03-24",
+    "time": "08:05:30,241",
+    "ip": "[129.1.74.30]",
+    "user_name": "刘玉清",
+    "user_id": "4203",
+    "request_id": "[22679b92c9124411889f54bf4787770c]",
+    "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+    "status": "200",
+    "time_span": "0",
+    "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+  "_id": {
+      "$oid": "605d3b90006b854f004420d9"
+  },
+  "date": "2021-03-24",
+  "time": "08:05:30,241",
+  "ip": "[129.1.74.30]",
+  "user_name": "刘玉清",
+  "user_id": "4203",
+  "request_id": "[22679b92c9124411889f54bf4787770c]",
+  "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+  "status": "200",
+  "time_span": "0",
+  "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+},{
+    "_id": {
+        "$oid": "605d3b90006b854f004420d9"
+    },
+    "date": "2021-03-24",
+    "time": "08:05:30,241",
+    "ip": "[129.1.74.30]",
+    "user_name": "刘玉清",
+    "user_id": "4203",
+    "request_id": "[22679b92c9124411889f54bf4787770c]",
+    "uri": "/api/ZYBSDZFPJKManager/getDZFPSFQY_ZY",
+    "status": "200",
+    "time_span": "0",
+    "detail": "\r\n2021-03-24 08:05:30,241 [129.1.74.30] [22679b92c9124411889f54bf4787770c] [tomcat-exec-12] \nrequest: {   uri: /api/ZYBSDZFPJKManager/getDZFPSFQY_ZY,\n  start: 2021-03-24 08:05:30.241,  end: 2021-03-24 08:05:30.241,  timeSpan: 0,\n  method: POST, \n  header: { \n    host:129.1.20.84:8089\n    connection:keep-alive\n    content-length:85\n    accept:application/json, text/plain, */*\n    accept-language:zh-CN,zh;q=0.9\n    content-type:application/x-www-form-urlencoded;charset=UTF-8\n    origin:http://129.1.20.84\n    user-agent:Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36\n    referer:http://129.1.20.84/his-zysf/app/\n    accept-encoding:gzip, deflate\n  }\n  body: { \n    token:232958b4f37c457f81a8382685ecf5f3\n    ygbh00:4203\n    zwxm00:刘玉清\n  }\n}\nresponse: { \n  status: 200, \n  header: { \n    x-request-id : 22679b92c9124411889f54bf4787770c\n    Vary : Origin\n    Vary : Origin\n    Vary : Origin\n    Access-Control-Allow-Origin : http://129.1.20.84\n    Access-Control-Expose-Headers : x-odc-decision, x-request-id, Content-Disposition, dict-update-timestamp, x-lts-xid\n    Access-Control-Allow-Credentials : true\n    dict-update-timestamp : 2021-03-11 10:46:59;10071,10059,11,28,29,10027,10045,10107,10068,10058,10044\n  }\n  body: {\"status\":200,\"title\":\"ok\",\"payload\":false}\n}\nstart: 2021-03-24 08:05:30.241, \nend: 2021-03-24 08:05:30.241, \ntimeSpan:0 \nstack: { \n  com.ylz.his.login.impl.TokenServiceImpl.getYgbmByToken : {\n    timeSpan:0\n    , details: {\n      LogEntry: {message: source='com.ylz.his.login.impl.TokenServiceImpl'level='INFO'source='getToken============================token:232958b4f37c457f81a8382685ecf5f3====================user:true'}\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BSDZFPJKManagerImpl.getDZFPSFQY_ZY : {\n    timeSpan:0\n    , children: {\n    com.ylz.data.dict.impl.DictQueryServiceImpl.getMyTYZDCSValue : {\n      timeSpan:0\n    }\n    }\n  }\n  com.ylz.his.zysf.bill.apiservice.impl.BillServiceImpl.onApplicationEvent : {\n    timeSpan:0\n  }\n  , details: {\n    LogEntry: {message: source='com.ylz.his.login.web.filter.LoginFilter'level='INFO'source='操作员:4203,操作员姓名:刘玉清'}\n  }\n}\n "
+}
+  ]
+}

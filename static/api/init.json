@@ -1,0 +1,53 @@
+{
+  "clearInfo": {
+    "clearUrl": "api/clear.json"
+  },
+  "homeInfo": {
+    "title": "日志查询",
+    "icon": "fa fa-home",
+    "href": "page/table.html"
+  },
+  "logoInfo": {
+    "title": "HIS13 维护工具",
+    "image": "images/logo.png",
+    "href": ""
+  },
+  "menuInfo": {
+    "currency": {
+      "title": "常规管理",
+      "icon": "fa fa-address-book",
+      "child": [
+        {
+          "title": "后端日志查询",
+          "href": "page/table.html",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+        {
+          "title": "后端日志加载",
+          "href": "page/uplog.html",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+		    {
+          "title": "客户端日志收集",
+          "href": "page/client-log-collect.html",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+		    {
+          "title": "客户端日志下载",
+          "href": "page/log-down.html",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        },
+		{
+          "title": "JSON格式化",
+          "href": "page/json-view.html",
+          "icon": "fa fa-file-text",
+          "target": "_self"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <link rel="stylesheet" href="../css/dtree.css" media="all">
+    <link rel="stylesheet" href="../css/font/dtreefont.css" media="all">
+</head>
+<body>
+<div class="layuimini-container">  
+
+  <div class="layui-row">
+    <div class="layui-col-md6" style="overflow-y:auto;">
+      <form class="layui-form choose-select" action="">
+        <div class="layui-form-item">
+          <label class="layui-form-label">选择框</label>
+          <div class="layui-input-block">
+            <select name="system" lay-filter="system-select"  id="system_select">
+            </select>
+          </div>
+        </div>
+      </form>
+      <div id="test1"></div>
+    </div>
+    <div class="layui-col-md6" style="padding-left:20px;">
+      <div>
+        <form class="layui-form system-choose" action="">
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <div class="log_box">请选择一个日志文件</div>
+              <button type="button" class="layui-btn upLogBtn layui-btn-disabled">加载</button>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script id="addOption" type="text/html">
+  <!--layui模板引擎，动态添加后台数据-->
+  {{# layui.each(d, function(index, item){ }}
+  <option value='{{  item.service_code  }}'>{{ item.name }}</option>
+  {{# }); }}
+</script>
+<style>
+  .log_box{margin:0 0 20px 0;}
+  #test1{width:100% !important;overflow-y:auto}
+  .system-choose,.choose-select{padding-top:15px;}
+  .choose-select .layui-form-item{margin-bottom:0;}
+  .layui-input-inline,.layui-select-title,.layui-input-block{padding-top:3px;}
+</style>
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script src="../js/base.js" charset="utf-8"></script>
+<script>
+
+  
+ layui.config({
+        base: '../js/lay-module/' 
+    }).extend({
+        dtree: 'dtree/dtree', //dtree组件
+        myModule:'moduleMy/myModule' //ajax拦截器
+    }).use(['dtree','myModule','form',"laytpl"], function(){
+      /****************************变量初始化********************************/
+          let curLogFilePath="" //当前选中的节点路径
+          let curSystem="1" //当前选中的子系统
+          var dtree = layui.dtree,
+          $ = layui.jquery,
+          form = layui.form,
+		  laytpl = layui.laytpl,
+          myModule = layui.myModule;
+          let tableHeight = getBaseHeight()
+          $(".layuimini-container").css({height:`${tableHeight}px`})
+          $("#test1").css({height:`${tableHeight-$(".choose-select").outerHeight()}px`})
+          //获取下拉框信息
+          //ajax
+          myModule.ajax({
+              url: `${ajaxUrlSet}/listservicelog`,              
+              type:"POST",
+              dataType: "json",
+              success: function(res) {
+                  var getTpl = $("#addOption").get(0).innerHTML;
+                  var view = $("#system_select").get(0);
+                  var html = laytpl(getTpl).render(res.data, function(html) {
+                      view.innerHTML = html;
+                  });
+                  form.render('select');
+              },
+              error: function() {
+                // layer.close(loadInd);
+              }
+          });
+       /****************************树********************************/
+          var DemoTree = dtree.render({
+              elem: "#test1",//html中的id值
+              //url:"../api/demoTree1.json",
+              url: `${ajaxUrlSet}/listdir`,
+              contentType:"application/json",
+              method:"POST",
+              defaultRequest:{basicData:"basic_data"}, // 自定义默认参数的键配置在此
+              request: {basic_data: {full_path:""},service_code:curSystem, list_type: "1"},
+              beforeSend:function(ajax, XMLHttpRequest, self){
+                //loading
+                var loadingIndex = layer.load(0, {shade: [0.1, '#000']});
+              },
+              success:function (data) {
+                //关闭遮罩层
+                layer.closeAll('loading')
+              },
+          });
+          //树的点击事件
+          dtree.on("node('test1')" ,function(obj){
+              console.log(obj);
+              console.log(obj.param.basic_data.full_path)
+              let pathData=obj.param.basic_data.full_path
+              let str=""
+              if(obj.param.leaf){
+                curLogFilePath = pathData;
+                str = `当前选中的日志路径：${pathData}`
+                $(".upLogBtn").removeClass("layui-btn-disabled")
+              }
+              else{
+                curLogFilePath = ""
+                str='请选择一个日志文件'
+                $(".upLogBtn").addClass("layui-btn-disabled")
+              }
+              setLogBox(str)
+
+          });
+        $(".upLogBtn").on("click",function(){
+          
+          //loading
+          var loadingIndex = layer.load(0, {shade: [0.1, '#000']});
+		  let params={
+			service_code: curSystem,
+			log_file: curLogFilePath
+          }
+          console.log("params",params)
+          //ajax请求
+		  myModule.ajax({
+				  url: `${ajaxUrlSet}/logload`,
+				  type: "Post",
+				  dataType: "json",
+				  data: JSON.stringify(params),
+				  success: function(res) {
+					layer.msg('请求成功', {icon: 1,time: 1100});
+					//关闭遮罩层
+					layer.closeAll('loading')
+				  },
+				  error:function(r){
+					layer.msg('请求失败', {icon: 2,time: 1100});
+					//关闭遮罩层
+					layer.closeAll('loading')
+				  }
+			  })
+
+
+        })
+        //设置当前选中日志的文件路径
+        function setLogBox(name){
+          $(".log_box").text(name)
+        }
+        //下拉框操作
+        form.on('select(system-select)', function (data) {
+            curSystem=data.value
+            console.log("curSystem",curSystem)
+            dtree.reload('test1',{
+              beforeSend:function(ajax, XMLHttpRequest, self){
+                //loading
+                var loadingIndex = layer.load(0, {shade: [0.1, '#000']});
+              },
+              request: {basic_data: {full_path:""},service_code:data.value, list_type: "1"},
+              success:function (data) {
+                resetPage()
+                //关闭遮罩层
+                layer.closeAll('loading')
+              }
+            })
+        });
+        //重置变量
+        function resetPage(){
+          $(".downLoadBtn").addClass("layui-btn-disabled")
+          curLogFilePath = ""
+          setLogBox('请选择一个日志文件')
+        }
+      })
+
+</script>
+
+</body>
+</html>

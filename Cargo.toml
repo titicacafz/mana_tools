@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "log_viewer",
+    "log_tool",
+    "log_config",
+]

@@ -1,0 +1,16 @@
+[package]
+name = "log_tool"
+version = "0.1.0"
+authors = ["liwumeng <910027178@qq.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.14"
+log4rs = {version="1",features = ["toml_format"]}
+bson = "1.2.0"
+mongodb = {version = "1.2.0", default-features = false, features = ["sync"]}
+serde = { version = "1.0", features = ["derive"] }
+encoding = "0.2.33"
+log_config = { path = "../log_config" }
