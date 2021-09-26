@@ -34,6 +34,7 @@
             <div class="layui-input-block">
               <div class="log_box">请选择一个日志文件</div>
               <button type="button" class="layui-btn upLogBtn layui-btn-disabled">加载</button>
+              <button type="button" class="layui-btn downLoadLogBtn layui-btn-disabled">下载</button>
             </div>
           </div>
         </form>
@@ -124,43 +125,49 @@
                 curLogFilePath = pathData;
                 str = `当前选中的日志路径：${pathData}`
                 $(".upLogBtn").removeClass("layui-btn-disabled")
+                $(".downLoadLogBtn").removeClass("layui-btn-disabled")
               }
               else{
                 curLogFilePath = ""
                 str='请选择一个日志文件'
                 $(".upLogBtn").addClass("layui-btn-disabled")
+                $(".downLoadLogBtn").addClass("layui-btn-disabled")
               }
               setLogBox(str)
 
           });
+          //加载日志
         $(".upLogBtn").on("click",function(){
-          
           //loading
           var loadingIndex = layer.load(0, {shade: [0.1, '#000']});
-		  let params={
-			service_code: curSystem,
-			log_file: curLogFilePath
-          }
+          let params={
+                service_code: curSystem,
+                log_file: curLogFilePath
+              }
           console.log("params",params)
           //ajax请求
-		  myModule.ajax({
-				  url: `${ajaxUrlSet}/logload`,
-				  type: "Post",
-				  dataType: "json",
-				  data: JSON.stringify(params),
-				  success: function(res) {
-					layer.msg('请求成功', {icon: 1,time: 1100});
-					//关闭遮罩层
-					layer.closeAll('loading')
-				  },
-				  error:function(r){
-					layer.msg('请求失败', {icon: 2,time: 1100});
-					//关闭遮罩层
-					layer.closeAll('loading')
-				  }
-			  })
-
-
+          myModule.ajax({
+              url: `${ajaxUrlSet}/logload`,
+              type: "Post",
+              dataType: "json",
+              data: JSON.stringify(params),
+              success: function(res) {
+              layer.msg('请求成功', {icon: 1,time: 1100});
+              //关闭遮罩层
+              layer.closeAll('loading')
+              },
+              error:function(r){
+              layer.msg('请求失败', {icon: 2,time: 1100});
+              //关闭遮罩层
+              layer.closeAll('loading')
+              }
+            })
+        })
+        //下载日志
+        $(".downLoadLogBtn").on("click",function(){
+          console.log("curLogFilePath",curLogFilePath)
+          console.log("curSystem",curSystem)
+          downLoadFile(`${ajaxUrlSet}/logdown`,{full_path:curLogFilePath, service_code: curSystem,list_type: "2"},"post",false) 
         })
         //设置当前选中日志的文件路径
         function setLogBox(name){
